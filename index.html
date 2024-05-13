@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="description"
+          content="Validate, format, and compare two JSON documents.  See the differences between the objects instead of just the new lines and mixed up properties.">
+    <title>JSON Diff - The semantic JSON compare tool</title>
+
+    <link rel="stylesheet" href="src/css/jdd.css" type="text/css" media="screen">
+
+    <script src="src/jsl/jsl.format.js" type="text/javascript" charset="utf-8"></script>
+    <script src="src/jsl/jsl.parser.js" type="text/javascript" charset="utf-8"></script>
+    <script src="src/jdd.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+
+<div id="main">
+    <div id="initContainer">
+        <div class="left">
+            <label for="leftTextArea">JSON Left</label>
+            <textarea placeholder="Enter JSON to compare, enter an URL to JSON" id="leftTextArea"></textarea>
+            <pre id="errorLeft" class="error" style="display: none"></pre>
+        </div>
+        <div class="center">
+            <button class="btn btn-primary" id="compareJSON">Compare</button>
+        </div>
+        <div class="right">
+            <label for="rightTextArea">JSON Right</label>
+            <textarea placeholder="Enter JSON to compare, enter an URL to JSON" id="rightTextArea"></textarea>
+            <pre id="errorRight" class="error" style="display: none"></pre>
+        </div>
+    </div>
+    <div id="diffContainer">
+        <div>
+            <div id="report">
+                <div id="numDifferences"></div>
+                <div id="showCheckboxesContainer">
+                    show:
+                    <label for="missingCheckbox">
+                        <input id="missingCheckbox" type="checkbox">
+                    </label>
+                    <label for="typeCheckbox">
+                        <input id="typeCheckbox" type="checkbox">
+                    </label>
+                    <label for="equalCheckbox">
+                        <input id="equalCheckbox" type="checkbox">
+                    </label>
+                </div>
+            </div>
+            <button id="newDiff">Perform a new diff</button>
+        </div>
+        <pre id="leftDiff"></pre>
+        <pre id="rightDiff"></pre>
+        <div id="toolbarContainer">
+            <div id="toolbarNavigation"><span id="backward"><</span><span id="navIndex">1 of 2</span><span id="forward">></span>
+            </div>
+            <ul id="toolbar"></ul>
+        </div>
+    </div>
+</div>
+</body>
+</html>
