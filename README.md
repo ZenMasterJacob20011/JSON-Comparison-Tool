@@ -16,3 +16,7 @@ also tried to not look at the source code as much as possible when making this p
 
 - Download and unzip project
 - Copy and paste the absolute path to the ``/src/index.html`` file
+
+### Pictures of tool
+![img.png](img.png)
+![img_1.png](img_1.png)
